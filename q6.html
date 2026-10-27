@@ -1,0 +1,38 @@
+<!-- // Q6 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Product Name: <input type="text" name="" id="p1"/>
+     Product Price: <input type="text" name="" id="p2"/>
+      Product Quantity: <input type="text" name="" id="q1"/>
+      <button type="Submit" name="" id="b1">Submit</button>
+
+      <script>
+        const b1 = document.getElementById("b1")
+        b1.addEventListener("click",()=>{
+            const name =document.getElementById("p1").value;
+            const price = document.getElementById("p2").value;
+            const quantity = document.getElementById("q1").value;
+
+            if(name.length<1){
+                alert("enter product name!");
+            }else if( price < 1){
+                alert("Plz enter positive number!")
+            }else if(quantity < 1){
+                alert("Plz enter atleast 1 quantity!")
+            }else{
+                alert("Thank You")
+                const user ={name,price,quantity};
+                localStorage.setItem("data",JSON.stringify(user));
+            }
+
+        })
+      </script>
+
+</body>
+</html>

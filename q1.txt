@@ -1,0 +1,7 @@
+Step 1: initilaize  the javascript (npm init -y)
+
+step 2: after initilaizing,again download typescript (npm install typescript)
+
+step 3:  to run the typescript file we have to run the command in terminal (tsc filename.ts)
+
+step 4: after writing the filenmae.ts a filename.js will come to execute the filename.js u have to write command (node filename.js)

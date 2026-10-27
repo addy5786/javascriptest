@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    Name : <input type="text" name="", id="n1"/>
+    Email : <input type="email" name="", id="e1"/>
+    Password : <input type="password" name="", id="p1"/>
+    <button type="Submit" name="" id="b1">Submit</button>
+
+    <script>
+        const b1 = document.getElementById("b1")
+        b1.addEventListener("click",()=>{
+            const name= document.getElementById("n1").value
+            const email= document.getElementById("e1").value
+            const pass = document.getElementById("p1").value
+
+            const nameReg = /^[A-Za-z]+$/
+            const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            const passReg = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).+$/
+
+            if(!nameReg.test(name)){
+                alert("Enter valid name")
+            }else if (!emailReg.test(email)){
+                alert("Enter valid email!")
+            }else if (!passReg.test(pass)){
+                alert("Enter valid password!")
+            }else{
+                alert("thank you")
+            }
+        })
+    </script>
+
+</body>
+</html>
